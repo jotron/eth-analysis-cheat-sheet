@@ -1,0 +1,49 @@
+\part{Folgen und Reihen}
+
+\section{Konvergenz von Folgen}
+
+% Definition 1
+\Def Eine Folge $a_n$ \emph{konvergiert} gegen $a\in \R$, falls
+\[
+\forall \epsilon > 0 \ \exists N=N(\epsilon)\in\N, \ \forall n\geq
+N \colon \abs{a_n-a} < \epsilon.
+\]
+
+% Definition 2
+\Def Eine Folge $a_n$ \emph{konvergiert} gegen $a\in \R$, falls es $l \in \R$ gibt, so dass $\forall \epsilon > 0$ die Menge \\
+$
+\left\{n \in \mathbf{N}^{*}: a_{n} \notin\right] l-\varepsilon, l+\varepsilon[\}
+$ endlich ist.
+
+\sep
+
+% Monotone Konvergenz
+\Satz[Monotone] Sei $\left(a_{n}\right)_{n \geqslant 1}$ monoton fallend und nach unten beschränkt. Dann konvergiert
+$\left(a_{n}\right)_{n \geqslant 1}$ mit Grenzwert
+$
+\lim _{n \rightarrow \infty} a_{n}=\inf \left\{a_{n}: n \geqslant 1\right\}
+$.
+
+% Cauchy
+\Satz[Cauchy] Die Folge $\left(a_{n}\right)_{n \geqslant 1}$ ist genau dann konvergent, falls $\forall \varepsilon>0 \quad \exists N \geqslant 1 \quad$ so dass $\quad\left|a_{n}-a_{m}\right|<\varepsilon \quad \forall n, m \geqslant N$
+
+
+\section{Konvergenz von Reihen}
+
+% Cauchy
+\Satz[Cauchy] Die Reihe $\sum_{k=1}^{\infty} a_{k}$ ist genau dann konvergent, falls. $\forall \varepsilon>0 \quad \exists N \geqslant 1 \quad$ mit $\quad\left|\sum\limits_{k=n}^{m} a_{k}\right|<\varepsilon \quad \forall m \geqslant n \geqslant N$
+
+% Quotientenkriterum
+\Satz[Ratio] Sei $\left(a_{n}\right)_{n \geqslant 1}$ mit $a_{n} \neq 0 \quad \forall n \geqslant 1 .$ Falls 
+$$\limsup\limits_{n \rightarrow \infty} \frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}<1$$ dann konvergiert die Reihe absolut.
+Falls $\liminf\limits_{n \rightarrow \infty}\square > 1$ divergiert die Reihe.
+
+% Wurzelkriterum
+\Satz[Root] Falls $$\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}<1$$ dann konvergiert $\sum_{n=1}^{\infty} a_{n}$ absolut. Falls $\square > 1$, dann divergiert die Reihe.
+
+
+% % % % %
+% TRICKS
+% % % % %
+\section{Tricks}
+\Lemma (Bernouilli) $(1+x)^{n} \geqslant 1+n \cdot x \quad \forall n \in \N, x>-1$.
