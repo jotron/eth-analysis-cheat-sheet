@@ -1,0 +1,22 @@
+\part{Stetige Funktionen}
+
+% Allgemeine Stetigkeit
+\Def Die Funktion $f: D \longrightarrow \R$ ist stetig falls sie in jedem Punkt von $D$ stetig ist.
+
+\section{Stetigkeit an einem Punkt}
+
+% Epsilon-Delta Definition
+\Def[Epsilon] Sei $x_{0} \in D \subseteq \R$. Die Funktion $f: D \longrightarrow \R$ ist in $\boldsymbol{x}_{0}$ stetig, falls es für jedes $\varepsilon>0$ ein $\delta>0$ gibt, so dass für alle $x \in D$ gilt: $$\abs{x-x_{0}}<\delta \Longrightarrow\abs{f(x)-f\left(x_{0}\right)}<\varepsilon$$.
+
+% Sequence Definition
+\Satz[Sequence] Sei $x_{0} \in D \subseteq \R$. Die Funktion $f: D \longrightarrow \R$ ist genau dann in $\boldsymbol{x}_{0}$ stetig, falls für jede Folge $\left(a_{n}\right)_{n \geqslant 1}$ in $D$
+	$$\lim \limits_{n \rightarrow \infty} a_{n}=x_{0} \Longrightarrow \lim \limits_{n \rightarrow \infty} f\left(a_{n}\right)=f\left(x_{0}\right)$$ gilt.
+	
+% Limit
+\Satz[Sidewise] Sei $x_{0} \in D \subseteq \R$. Die Funktion $f: D \longrightarrow \R$ ist in $\boldsymbol{x}_{0}$ stetig, falls 
+	$$f(x_0) =\lim \limits_{x \rightarrow x_0} f(x) =  \lim \limits_{x \rightarrow x_0^+} f(x) = \lim \limits_{x \rightarrow x_0^-} f(x)$$ gilt.	
+
+
+% Punktweise Konvergenz
+
+% Gleichmässige Konvergenz

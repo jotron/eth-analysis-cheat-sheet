@@ -3,14 +3,15 @@
 \section{Konvergenz von Folgen}
 
 % Definition 1
-\Def Eine Folge $a_n$ \emph{konvergiert} gegen $a\in \R$, falls
+\Def[1] Eine Folge $a_n$ \emph{konvergiert} gegen $a\in \R$, falls
 \[
 \forall \epsilon > 0 \ \exists N=N(\epsilon)\in\N, \ \forall n\geq
 N \colon \abs{a_n-a} < \epsilon.
 \]
+Für $\R^d$ muss gelten $\norm{a_n-a} < \epsilon$.
 
 % Definition 2
-\Def Eine Folge $a_n$ \emph{konvergiert} gegen $a\in \R$, falls es $l \in \R$ gibt, so dass $\forall \epsilon > 0$ die Menge \\
+\Def[2] Eine Folge $a_n$ \emph{konvergiert} gegen $a\in \R$, falls es $l \in \R$ gibt, so dass $\forall \epsilon > 0$ die Menge \\
 $
 \left\{n \in \mathbf{N}^{*}: a_{n} \notin\right] l-\varepsilon, l+\varepsilon[\}
 $ endlich ist.
@@ -27,8 +28,14 @@ $.
 % Cauchy
 \Satz[Cauchy] Die Folge $\left(a_{n}\right)_{n \geqslant 1}$ ist genau dann konvergent, falls $\forall \varepsilon>0 \quad \exists N \geqslant 1 \quad$ so dass $\quad\left|a_{n}-a_{m}\right|<\varepsilon \quad \forall n, m \geqslant N$
 
+% Sandwich
+\Satz[Sandwich] Die Folge $\left(a_{n}\right)_{n \geqslant 1}$ konvergiert zu $a$, falls $\left(b_{n}\right)_{n \geqslant 1}, \left(c_{n}\right)_{n \geqslant 1}$ existieren mit Grenzwert $a$ und $\forall n\geq1 : b_n \leq a_n \leq c_n$.
+
 
 \section{Konvergenz von Reihen}
+
+% Absolute Convergence
+\Def Die Reihe $\sum_{k=1}^{\infty} a_{k}$ konvergiert absolut ($\Rightarrow$ konvergent), falls $\sum\limits_{k=1}^{\infty} \abs{a_{k}}$ kovergiert.
 
 % Cauchy
 \Satz[Cauchy] Die Reihe $\sum_{k=1}^{\infty} a_{k}$ ist genau dann konvergent, falls. $\forall \varepsilon>0 \quad \exists N \geqslant 1 \quad$ mit $\quad\left|\sum\limits_{k=n}^{m} a_{k}\right|<\varepsilon \quad \forall m \geqslant n \geqslant N$
@@ -41,9 +48,19 @@ Falls $\liminf\limits_{n \rightarrow \infty}\square > 1$ divergiert die Reihe.
 % Wurzelkriterum
 \Satz[Root] Falls $$\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}<1$$ dann konvergiert $\sum_{n=1}^{\infty} a_{n}$ absolut. Falls $\square > 1$, dann divergiert die Reihe.
 
+% Alternierende Reihe
+\Satz[Alternating] Sei $\left(a_{n}\right)_{n \geqslant 1}$ monoton fallend mit $a_{n} \geqslant 0 \quad \forall n \geqslant 1$ und $\lim \limits_{n \rightarrow \infty} a_{n}=0 .$ Dann konvergiert 
+$$S:=\sum_{k=1}^{\infty}(-1)^{k+1} a_{k}$$ und es gilt $a_{1}-a_{2} \leqslant S \leqslant a_{1}$.
+
 
 % % % % %
 % TRICKS
 % % % % %
-\section{Tricks}
+\section{Andere Aussagen}
 \Lemma (Bernouilli) $(1+x)^{n} \geqslant 1+n \cdot x \quad \forall n \in \N, x>-1$.
+
+% Bolzano Weierstrass
+\Satz[Teilfolge] Jede beschränkte Folge besitzt eine konvergente Teilfolge.
+
+% R^d
+\Satz[Vektorfolge] $\lim \limits_{n \rightarrow \infty} a_{n}=b$ genau dann wenn $\lim \limits_{n \rightarrow \infty} a_{n, j}=b_{j} \quad \forall 1 \leqslant j \leqslant d$.
