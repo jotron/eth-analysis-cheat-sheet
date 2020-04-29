@@ -64,3 +64,30 @@ $$S:=\sum_{k=1}^{\infty}(-1)^{k+1} a_{k}$$ und es gilt $a_{1}-a_{2} \leqslant S 
 
 % R^d
 \Satz[Vektorfolge] $\lim \limits_{n \rightarrow \infty} a_{n}=b$ genau dann wenn $\lim \limits_{n \rightarrow \infty} a_{n, j}=b_{j} \quad \forall 1 \leqslant j \leqslant d$.
+
+% Lim Sup, Lim Inf
+\Def[LimSup, LimInf] Sei $a_n$ beschränkt, definieren wir
+$$\limsup\limits_{n \rightarrow \infty} a_n := \lim \limits_{n \rightarrow \infty} \sup \{a_k : k\geqslant n\}$$
+$$\liminf\limits_{n \rightarrow \infty} a_n := \lim \limits_{n \rightarrow \infty} \inf \{a_k : k\geqslant n\}$$
+
+% % % % %
+% Bekannte Grenzwerte
+% % % % %
+
+
+\section{Bekannte Grenzwerte}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{4.5cm}p{1cm}}
+$\lim_{n \rightarrow \infty} \sqrt[n]{n}$ & $=1$
+\\
+$\lim_{n \rightarrow \infty} n^{a}q^{n}, \ 0 \leq q \leq 1, \ a \in \Z$ & $=0$
+\\
+\midrule
+$\lim _{n \rightarrow \pm \infty}\left(1 \pm \frac{x}{n}\right)^{n}$&$=e^{\pm x}$
+\\
+$\lim \limits_{n \rightarrow \infty \land f(n) \rightarrow \infty}\left(1+\frac{1}{f(n)}\right)^{f(n)}$ & $=e$
+\\
+$\lim _{x \rightarrow 0}(1+f(x))^{\frac{1}{f(x)}}$ & $=e$
+\end{tabular}
+\end{table}

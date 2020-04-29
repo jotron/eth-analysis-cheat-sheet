@@ -1,0 +1,41 @@
+\part{Differenzierbare Funktionen}
+\setcounter{section}{0}
+% Allgemeine Diff
+\Def Die Funktion $f: D \longrightarrow \R$ ist differenzierbar falls sie in jedem Punkt von $D$ differenzierbar ist.
+
+% % % % %
+% diff. an einem Punkt
+% % % % %
+\section{Differenzierbarkeit}
+
+\Def $f$ ist in $x_0$ differenzierbar falls 
+$$\lim \limits_{x \rightarrow x_{0}} \frac{f(x)-f\left(x_{0}\right)}{x-x_{0}}$$
+existiert. Falls $x=x_0+h$, ist dies äquivalent zu
+$$\lim \limits_{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}$$
+
+\section{Abbleitungen}
+\Satz[Ableitungsregeln]
+\begin{itemize}
+  \item Summenregel
+  \[(f+g)'(x_0) = f'(x_0) + g'(x_0)\]
+  \item Produktregel
+  \[(f\cdot g)'(x_0) = f'(x_0)g(x_0) + f(x_0)g'(x_0)\]
+  \item Quotientenregel
+  \[\left(\frac{f}{g}\right)'=
+  \frac{f'(x_0)g(x_0) - f(x_0)g'(x_0)}{g^2(x_0)}\]
+  \item Kettenregel \[
+	(g\circ f)'(x_0) = g'(f(x_0))\cdot f'(x_0).
+  \]
+\end{itemize}
+
+% L17
+% TODO exp(x)', sin(x)', cos(x)', tan(x)'
+% TODO (f inverse)'
+
+% L18
+% TODO f'(x)=0 in local extrema
+
+% Eigenschaften:
+% TODO f(a) = f(b), es gibt a < x < b mit f'(x) = 0.
+% Mittelwertsatz, zwischen zwei stellen a und b, muss es einen punkt geben mit f'(x) = f(a)-f(b) /a-b, sonst wäre die steigung konstant kleiner oder grösser was ein widerspruch wäre.
+

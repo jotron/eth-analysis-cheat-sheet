@@ -1,0 +1,63 @@
+\part{Stetige Funktionen}
+\setcounter{section}{0}
+% Allgemeine Stetigkeit
+\Def Die Funktion $f: D \longrightarrow \R$ ist stetig falls sie in jedem Punkt von $D$ stetig ist.
+
+% % % % %
+% Stetigkeit an einem Punkt
+% % % % %
+\section{Stetigkeit an einem Punkt}
+
+% Epsilon-Delta Definition
+\Def[Epsilon] Sei $x_{0} \in D \subseteq \R$. Die Funktion $f: D \longrightarrow \R$ ist in $\boldsymbol{x}_{0}$ stetig, falls es für jedes $\varepsilon>0$ ein $\delta>0$ gibt, so dass für alle $x \in D$ gilt: $$\abs{x-x_{0}}<\delta \Longrightarrow\abs{f(x)-f\left(x_{0}\right)}<\varepsilon$$.
+
+% Sequence Definition
+\Satz[Sequence] Sei $x_{0} \in D \subseteq \R$. Die Funktion $f: D \longrightarrow \R$ ist genau dann in $\boldsymbol{x}_{0}$ stetig, falls für jede Folge $\left(a_{n}\right)_{n \geqslant 1}$ in $D$
+	$$\lim \limits_{n \rightarrow \infty} a_{n}=x_{0} \Longrightarrow \lim \limits_{n \rightarrow \infty} f\left(a_{n}\right)=f\left(x_{0}\right)$$ gilt.
+	
+% Limit
+\Satz[Sidewise] Sei $x_{0} \in D \subseteq \R$. Die Funktion $f: D \longrightarrow \R$ ist in $\boldsymbol{x}_{0}$ stetig, falls 
+	$$f(x_0) =\lim \limits_{x \rightarrow x_0} f(x) =  \lim \limits_{x \rightarrow x_0^+} f(x) = \lim \limits_{x \rightarrow x_0^-} f(x)$$ gilt.	
+	
+% Differnzierbarkeit
+\Satz[Differentiable] Sei $x_{0} \in D \subseteq \R$. Die Funktion $f: D \longrightarrow \R$ ist in $\boldsymbol{x}_{0}$ stetig, falls sie $\boldsymbol{x}_{0}$ differenzierbar ist.
+
+% % % % %
+% Eigenschaften an einem Punkt
+% % % % %
+\section{Eigenschaften}
+
+\Satz[Zwischenwertsatz] Sei $I \subset \R$ ein Intervall, $f: I \longrightarrow \R$ eine stetige Funktion und $a, b, \in I$. Für jedes $y$ zwischen $f(a)$ und $f(b)$ gibt es ein $x$ zwischen $a$ und $b$ mit $f(x)=y$.
+
+\Satz[Min-Max] Sei $f: I=[a, b] \longrightarrow \R$ stetig auf einem kompakten Intervall $I$. Dann gibt es $u \in I$ und $v \in I$ mit
+$$f(u) \leqslant f(x) \leqslant f(v) \quad \forall x \in I$$
+und f ist beschränkt.
+
+\Satz[Umkehrabbildung] Sei $I \subset \R$ ein Intervall und $f: I \longrightarrow \R$ stetig, streng monoton. Dann ist $J:=f(I) \subset \R$ ein Intervall und $f^{-1}: J \longrightarrow I$ ist stetig, streng monoton.
+
+% % % % %
+% Funktionenfolgen
+% % % % %
+\section{Konvergenz von Funktionenfolgen}
+
+% % % % %
+% Exp
+% % % % %
+\section{Die Exponentialfunktion}
+
+% % % % %
+% Trigonometry
+% % % % %
+\section{Trigonometrische Funktionen}
+
+% % % % %
+% Grenzwert an einem Punkt
+% % % % %
+\section{Grenzwert an einem Punkt}
+
+\Def[Häufungspunkt] $x_{0} \in \R$ ist ein Häufungs -punkt der Menge $D$ falls $\forall \delta>0$ gilt:
+$$(]x_{0}-\delta, x_{0}+\delta\left[\backslash\left\{x_{0}\right\}\right) \cap D \neq \varnothing$$
+
+\Def[Grenzwert] $\lim \limits_{x \rightarrow x_0} f(x) = A$ 
+mit $A \in \R$, $f: D \longrightarrow \R$, falls $x_0 \in \R$ ein Häufungspunkt ist und $\forall \varepsilon>0 \quad \exists \delta>0$
+$$\forall x \in D \cap(] x_{0}-\delta, x_{0}+\delta\left[\backslash\left\{x_{0}\right\}\right):|f(x)-A|<\varepsilon$$
