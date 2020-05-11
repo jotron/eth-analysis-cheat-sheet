@@ -13,7 +13,7 @@ $$\lim \limits_{x \rightarrow x_{0}} \frac{f(x)-f\left(x_{0}\right)}{x-x_{0}}$$
 existiert. Falls $x=x_0+h$, ist dies äquivalent zu
 $$\lim \limits_{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}$$
 
-\section{Abbleitungen}
+\section{Ableitungen}
 \Satz[Ableitungsregeln]
 \begin{itemize}
   \item Summenregel
@@ -28,8 +28,6 @@ $$\lim \limits_{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)
   \]
 \end{itemize}
 
-% L17
-% TODO exp(x)', sin(x)', cos(x)', tan(x)'
 % TODO (f inverse)'
 
 % L18
@@ -39,3 +37,35 @@ $$\lim \limits_{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)
 % TODO f(a) = f(b), es gibt a < x < b mit f'(x) = 0.
 % Mittelwertsatz, zwischen zwei stellen a und b, muss es einen punkt geben mit f'(x) = f(a)-f(b) /a-b, sonst wäre die steigung konstant kleiner oder grösser was ein widerspruch wäre.
 
+
+% % % % %
+% Wichtige Beispiele
+% % % % %
+\section{Wichtige Beispiele}
+\subsubsection{Exponentialfunktion}
+$$\exp (z):=\sum_{n=0}^{\infty} \frac{z^{n}}{n !} \quad \exp (z)' = \exp(z)$$
+$\exp : \R \longrightarrow] 0,+\infty[$ ist streng monoton wachsend, differenzierbar, und surjektiv. Beobachte dass $\exp (x) \geqslant 1+x \quad \forall x \in \R$.
+Die Umkehrabbildung ist 
+$$\ln :] 0,+\infty[\longrightarrow \R \quad \ln (x)' = 1/x$$
+wobei $\ln$ eine streng monoton wachsende, differenzierbare, bijektive Funktion ist.
+\sep
+\subsubsection{Trigonometrische Funkt.}
+\begin{align*}
+\sin(\varphi)  
+& =\sum_{k=0}^{\infty} (-1)^k \frac{\varphi^{2k}}{(2k)!} &\sin(\varphi)' = \cos(\varphi)  \\
+\cos(\varphi)  
+& = \sum_{k=0}^{\infty} (-1)^k \frac{\varphi^{2k+1}}{(2k+1)!} &\cos(\varphi)' = -\sin(\varphi) \\
+\tan(\varphi)  
+& = \frac{\sin(\varphi)}{\cos(\varphi)} & \tan(\varphi)' = \frac{1}{\cos(\varphi)^2}
+\end{align*}
+\Satz $\forall z \in \C$ 
+\begin{itemize}
+	\item $\exp(iz) = \cos(z) + i\sin(z)$
+	\item $\cos(z)^2 + \sin(z)^2 = 1$
+	\item $\sin(z+w) = sin(z)cos(w) + sin(w)cos(z)$ \\
+		  $\cos(z+w) = cos(z)cos(w) - sin(w)sin(z)$ 
+	\item $\sin(z) = \frac{e^{iz}-e^{-iz}}{2i}$, $\cos(z) = \frac{e^{iz}+e^{-iz}}{2}$
+\end{itemize}
+\sep
+\subsubsection{Hyperbolische Funkt.}
+\todo

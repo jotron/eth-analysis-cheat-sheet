@@ -40,15 +40,28 @@ und f ist beschränkt.
 % % % % %
 \section{Konvergenz von Funktionenfolgen}
 
-% % % % %
-% Exp
-% % % % %
-\section{Die Exponentialfunktion}
+\Def[Punktweise] Eine Folge stetiger Funktionen $f_n\colon\Omega\subset\R\to\R$
+konvergiert punktweise gegen $f(x)$, falls
+\[
+\forall x\in\Omega \ \lim_{n\to\infty} f_n(x) = f(x).
+\]
 
-% % % % %
-% Trigonometry
-% % % % %
-\section{Trigonometrische Funktionen}
+\Def[Gleichmässig] Eine Folge stetiger Funktionen $f_n\colon\Omega\subset\R\to\R$
+konvergiert gleichmässig gegen $f$, falls
+\[
+\lim_{n\to\infty} \sup_{x\in\Omega} \abs{f_n(x)-f(x)} = 0.
+\]
+bzw. falls gilt: $\forall \varepsilon>0  \quad \exists N \geqslant 1,$ so dass:
+$$
+\forall n \geqslant N, \quad \forall x \in D: \quad\left|f_{n}(x)-f(x)\right|<\varepsilon
+$$
+
+\Satz[Stetige Funktionenfolge] Sei $D \subset R$ und $f_{n}: D \rightarrow \R$ eine Funktionenfolge bestehend aus (in
+D) stetigen Funktionen die (in D) gleichmässig gegen eine Funktion $f: D \rightarrow \R$ konvergieren. Dann ist $f$ (in D) stetig.
+
+\Satz[Beschränkte Funktionenfolge] Sei $D \subset R$ und $f_{n}: D \rightarrow \R$ eine Folge stetiger Funktionen. Falls  $\left|f_{n}(x)\right| \leqslant c_{n} \quad \forall x \in D$ und $\sum_{n=0}^{\infty} c_{n}$ konvergiert dann konvergiert 
+$$\sum\limits_{n=0}^{\infty} f_n(x)  =: f(x)$$
+ebenfalls und deren Grenzwert $f$ ist eine in $D$ stetige Funktion.
 
 % % % % %
 % Grenzwert an einem Punkt
@@ -61,3 +74,5 @@ $$(]x_{0}-\delta, x_{0}+\delta\left[\backslash\left\{x_{0}\right\}\right) \cap D
 \Def[Grenzwert] $\lim \limits_{x \rightarrow x_0} f(x) = A$ 
 mit $A \in \R$, $f: D \longrightarrow \R$, falls $x_0 \in \R$ ein Häufungspunkt ist und $\forall \varepsilon>0 \quad \exists \delta>0$
 $$\forall x \in D \cap(] x_{0}-\delta, x_{0}+\delta\left[\backslash\left\{x_{0}\right\}\right):|f(x)-A|<\varepsilon$$
+
+
