@@ -52,12 +52,18 @@ wobei $\ln$ eine streng monoton wachsende, differenzierbare, bijektive Funktion 
 \subsubsection{Trigonometrische Funkt.}
 \begin{align*}
 \sin(\varphi)  
-& =\sum_{k=0}^{\infty} (-1)^k \frac{\varphi^{2k}}{(2k)!} &\sin(\varphi)' = \cos(\varphi)  \\
+& =\sum_{k=0}^{\infty} (-1)^k \frac{\varphi^{2k+1}}{(2k+1)!} &\sin(\varphi)' = \cos(\varphi)  \\
 \cos(\varphi)  
-& = \sum_{k=0}^{\infty} (-1)^k \frac{\varphi^{2k+1}}{(2k+1)!} &\cos(\varphi)' = -\sin(\varphi) \\
+& = \sum_{k=0}^{\infty} (-1)^k \frac{\varphi^{2k}}{(2k)!} &\cos(\varphi)' = -\sin(\varphi) \\
 \tan(\varphi)  
 & = \frac{\sin(\varphi)}{\cos(\varphi)} & \tan(\varphi)' = \frac{1}{\cos(\varphi)^2}
 \end{align*}
+
+\Korollar 
+\begin{align*}
+\forall \varphi > 0 \quad \exists \tau \in[0, \varphi] \quad \sin(\varphi) &= \varphi - \frac{\varphi^3}{6}\cos(\tau)
+\end{align*}
+
 \Satz $\forall z \in \C$ 
 \begin{itemize}
 	\item $\exp(iz) = \cos(z) + i\sin(z)$

@@ -1,0 +1,31 @@
+\part{Riemann Integral}
+\setcounter{section}{0}
+
+
+% % % % %
+% Integrationskriterien
+% % % % %
+\section{Integrationskriterien}
+
+% Riemann Summe
+\Def Sei $f : [a,b] \longrightarrow \R$, $P$ eine Partition ($P \subset [a,b]$ und $\{a,b\} \subset P$), $\delta_{i} = x_i-x_{i-1}$,
+und $\mathcal{P}(I)$ die Menge der Partitionen, wir definieren die Untersummen:
+$$s(f, P):=\sum_{i=1}^{n} f_{i} \delta_{i} \quad, f_i = \inf_{x_{i-1}\leq x \leq x_i} f(x)$$
+$$s(f):=\sup_{P \in \mathcal{P}(I)} s(f, P)$$
+und die Obersummen:
+$$S(f, P):=\sum_{i=1}^{n} F_{i} \delta_{i} \quad, F_i = \sup_{x_{i-1}\leq x \leq x_i} f(x)$$
+$$S(f):=\inf_{P \in \mathcal{P}(I)} S(f, P)$$
+
+% Integrierbarkeit
+\Def Eine beschränkte Funktion $f : [a,b] \longrightarrow \R$ ist integrierbar falls
+$$s(f) = S(f) \quad := \int_{a}^{b} f(x) dx$$
+
+% Satz zur Integrierbarkeit
+\Satz Eine beschränkte Funktion $f : [a,b] \longrightarrow \R$ ist integrierbar falls
+$$\forall \varepsilon>0 \quad \exists P \in \mathcal{P}(I) \quad \text { mit } \quad S(f, P)-s(f, P)<\varepsilon$$
+
+% Satz zur Integrierbarkeit
+\Satz $f : [a,b] \longrightarrow \R$  stetig $\Rightarrow$ integrierbar.
+
+% Satz zur Integrierbarkeit
+\Satz $f : [a,b] \longrightarrow \R$  monoton $\Rightarrow$ integrierbar.
