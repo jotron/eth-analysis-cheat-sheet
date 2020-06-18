@@ -29,3 +29,98 @@ $$\forall \varepsilon>0 \quad \exists P \in \mathcal{P}(I) \quad \text { mit } \
 
 % Satz zur Integrierbarkeit
 \Satz $f : [a,b] \longrightarrow \R$  monoton $\Rightarrow$ integrierbar.
+
+\Satz Seien $f,g : [a,b] \longrightarrow \R$ beschränkt integrierbar und $\lambda \in \R$, dann sind $f+g$, $\lambda \cdot f$, $f \cdot g$, 
+$\max (f,g)$, $\min (f,g)$, $|f|$,  $f / g$ (falls $g(x) \geq \beta > 0 \quad \forall x$) integrierbar.
+
+% NOTE: LEFTOUT: Kor. 5.1.9
+% NOTE: LEFTOUT: Satz. 5.2.10
+
+\section{Eigenschaften}
+
+\Satz[Cauchy-Schwarz] Seien $f,g : [a,b] \longrightarrow \R$ beschränkt integrierbar, dann gilt
+$$
+\left|\int_{a}^{b} f(x) g(x) d x\right| \leqslant \sqrt{\int_{a}^{b} f^{2}(x) d x} \sqrt{\int_{a}^{b} g^{2}(x) d x}
+$$
+
+\Satz[Mittelwertsatz] Seien $f,g : [a,b] \longrightarrow \R$ stetig, dann $\exists \xi \in [a,b]$ mit:
+$$\int_a^b f(x) dx = f(\xi)(b-a)$$
+
+% NOTE: LEFTOUT: Satz. 5.3.6
+
+\Satz[Stammfunktion] Seien $a < b$ und $f : [a,b] \longrightarrow \R$. Eine Funktion $F : [a,b] \longrightarrow \R$  heisst Stammfunktion von $f$, falls $F$ (stetig) differenzierbar in $[a,b]$ ist und $F' = f$ in $[a,b]$ gilt. \\
+$$F(x) = \int_a^x f(t) dt$$ ist eine Stammfunktion von $f$.
+
+\Satz[Fundamentalsatz] Sei $f : [a,b] \longrightarrow \R$ stetig, dann gilt
+$$\int_a^b f(x) dx = F(b)-F(a)$$
+
+\Satz[Partielle Int.] Seien $a < b$ reelle Zahlen und $f : [a,b] \longrightarrow \R$ stetig differenzierbar
+$$
+\int_{a}^{b} f(x) g^{\prime}(x) dx = \Big[f(x)g(x)\Big]_a^b - \int_{a}^{b} f^{\prime}(x) g(x) dx
+$$
+
+\Satz[Substitution] Sei $a<b$, $\phi : [a,b] \longrightarrow \R$ stetig differenzierbar, $I \subset \R$ ein Intervall mit $\phi([a,b]) \subset I$ und $f: I \longrightarrow \R$ eine stetige Funktion. Dann gilt:
+$$
+\int_{\phi(a)}^{\phi(b)} f(x) dx=\int_{a}^{b} f(\phi(t)) \phi^{\prime}(t) dt
+$$
+
+\Satz Sei $f_n : [a,b] \longrightarrow \R$ eine Folge von beschränkten, integrierbaren Funktionen die gleichmässig konvergieren, dann gilt
+$$
+\lim_{n \rightarrow \infty} \int_a^b f_n(x) dx = \int_a^b \lim_{n \rightarrow \infty} f_n(x) dx
+$$
+
+\Satz[Stirling] 
+$$
+n !=\frac{\sqrt{2 \pi n} n^{n}}{e^{n}} \cdot \exp \left(\frac{1}{12 n}+R_{3}(n)\right)
+$$
+$$
+\left|R_{3}(n)\right| \leqslant \frac{\sqrt{3}}{216} \cdot \frac{1}{n^{2}} \quad \forall n \geqslant 1
+$$
+
+% % % % %
+% Uneigentliche Integrale
+% % % % %
+\section{Uneigentliche Integrale}
+
+\Def Sei $f:[a,\infty] \longrightarrow \R$ beschränkt und integrierbar auf $[a,b] \quad \forall b \geq a$, wir definieren
+$$\int_a^\infty f(x) dx := \lim_{b \rightarrow \infty} \int_a^b f(x) dx$$
+und falls $f$ auf $[a+\epsilon,b], \epsilon>0$ beschränkt und integrierbar ist, aber nicht beschränkt auf $]a,b]$, dann
+$$\int_a^b f(x) dx := \lim_{\epsilon \rightarrow 0} \int_{a+\epsilon}^b f(x) dx$$
+
+\Lemma Sei $f:[a,\infty] \longrightarrow \R$ beschränkt und integrierbar auf $[a,b] \quad \forall b \geq a$.
+\begin{enumerate}
+  \item Falls $|f(x)| \leqslant g(x) \quad \forall x \geqslant a$ und $g(x)$ ist auf $[a, \infty[$ integrierbar, so ist f auf $[a, \infty[$ integrierbar.
+  \item Falls $0 \leqslant g(x) \leqslant f(x)$ und $\int_a^\infty g(x) dx$ divergiert, so divergiert auch $\int_a^\infty f(x) dx$
+\end{enumerate}
+
+% % % % %
+% Partialbruchzerlegung
+% % % % %
+\section{Partialbruchzerlegung}
+\Trick Sei $R(x) = \frac{P(x)}{Q(x)}$ eine rationale Funktion und $\text{grad}(P) < \text{grad}(Q)$, dann ist
+\begin{align*}
+Q(x) &= x^n + a_{n-1}x'{n-1}+\dots \\
+	 &=	\prod_{i=1}^{k}\left(x-\gamma_{i}\right)^{n_{i}} \prod_{j=1}^{l}\left(\left(x-\alpha_{j}\right)^{2}+\beta_{j}^{2}\right)^{m_{j}} 
+\end{align*}
+und
+\begin{align*}
+\frac{P(x)}{Q(x)}=&\sum_{i=1}^{k} \sum_{j=1}^{n_{i}} \frac{C_{i j}}{\left(x-\gamma_{i}\right)^{j}}+ \\
+				 &\sum_{i=1}^{l} \sum_{j=1}^{m_{i}} \frac{\left(A_{i j}+B_{i j} x\right)}{\left(\left(x-\alpha_{i}\right)^{2}+\beta_{i}^{2}\right)^{j}}
+\end{align*}
+
+% % % % %
+% Wichtige Beispiele
+% % % % %
+\section{Wichtige Beispiele}
+\Bsp[Gamma Funktion]
+$$
+\Gamma(s):=\int_{0}^{\infty} e^{-x} x^{s-1} d x
+$$
+Weitere Eigenschaften sind:
+\begin{itemize}
+	\item $\Gamma(1) = 1$
+	\item $\Gamma(s+1) = s \Gamma(s) \forall s>0$
+	\item $\Gamma(n+1) = n!$
+	\item logarithmisch konvex
+	\item $\Gamma(x)=\lim _{n \rightarrow+\infty} \frac{n ! n^{x}}{x(x+1) \cdots(x+n)} \quad \forall x>0$
+\end{itemize}

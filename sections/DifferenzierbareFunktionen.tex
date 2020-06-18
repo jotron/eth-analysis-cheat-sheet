@@ -13,6 +13,10 @@ $$\lim \limits_{x \rightarrow x_{0}} \frac{f(x)-f\left(x_{0}\right)}{x-x_{0}}$$
 existiert. Falls $x=x_0+h$, ist dies äquivalent zu
 $$\lim \limits_{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}$$
 
+\Satz $f : D \longrightarrow \R$ ist in genau dann in $x_0$ differenzierbar falls es eine in $x_0$ stetige Funktion $\phi : D \longrightarrow \R$ gibt, so dass
+$$f(x) = f(x_0) + \phi(x)(x-x_0) \quad \forall x \in D$$
+
+
 \section{Ableitungen}
 \Satz[Ableitungsregeln]
 \begin{itemize}
@@ -28,36 +32,62 @@ $$\lim \limits_{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)
   \]
 \end{itemize}
 
-% TODO (f inverse)'
+\Korollar[Inverse] Sei $f : D \longrightarrow E$ eine bijektive Funktion, f in $x_0$ differenzierbar, $f'(x_0) \neq 0$ und $f^{-1}$ ist in $y_0 = f(x_0)$ stetig, dann gilt
+$$(f^{-1})(y_0) = \frac{1}{f'(x_0)}$$
 
-% L18
-% TODO f'(x)=0 in local extrema
+\section{Zentrale Sätze}
+\Satz[Extrema] $f : \R \longrightarrow \R$ besitzt ein lokales Max./Min. in $x_0$ falls es $\delta >0$ gibt mit:
+		$$f(x) \lessgtr f(x_0) \quad \forall x \in ]x_0-\delta, x_0+\delta[ $$
+In beiden Fällen gilt $f'(x_0) = 0$.
 
-% Eigenschaften:
-% TODO f(a) = f(b), es gibt a < x < b mit f'(x) = 0.
-% Mittelwertsatz, zwischen zwei stellen a und b, muss es einen punkt geben mit f'(x) = f(a)-f(b) /a-b, sonst wäre die steigung konstant kleiner oder grösser was ein widerspruch wäre.
+\Satz Falls $f'(x_0) \lessgtr 0$ gibt es $\delta > 0$ mit
+\begin{align*}
+	&f(x) \lessgtr f(x_0) \quad &\forall x \in ]x_0, x_0+\delta[ \\
+	&f(x) \lessgtr f(x_0) \quad &\forall x \in ]x_0-\delta, x_0[ 
+\end{align*}
+
+\Satz[Lagrange] Sei $f:[a,b] \longrightarrow \R$ stetig und in $]a,b[$ diff., dann gibt es $\xi \in ]a,b[$ mit
+$$f(b)-f(a) = f'(\xi)(b-a)$$
+
+\Satz[L'Hospital] Seien $f,g: ]a,b[ \longrightarrow \R$ diff. mit $g'(x) \neq 0 \forall x \in [a,b]$. Falls
+$$\lim _{x \rightarrow b^{-}} f(x)=0, \quad \lim _{x \rightarrow b^{-}} g(x)=0, \quad \lim _{x \rightarrow b^{-}} \frac{f'(x)}{g'(x)}=:\lambda$$
+dann folgt
+$$\lim _{x \rightarrow b^{-}} \frac{f(x)}{g(x)}=\lambda$$
+
+
+\Def[Konvex] $f$ ist konvex (auf I) falls $\forall x \leq y$ und $\lambda \in [0,1]$ gilt
+$$f(\lambda x+(1-\lambda) y) \leqslant \lambda f(x)+(1-\lambda) f(y)$$
+
+\Def[Glatt] Die Funktion $f$ ist glatt falls sie $\forall n \geq 1$, n-mal differenzierbar ist.
+
+\Satz[Funktionenfolgen] Sei $f_n:]a,b[ \longrightarrow \R$ eine Funktionenfolge wobei $f_n \forall n$ einmal stetig differenzierbar ist. Falls $(f_n)_{n\geqslant1}$ und $(f_n')_{n\geqslant1}$ gleichässig in $]a,b[$ konvergieren gilt:
+$$(\lim _{n \rightarrow \infty} f_{n})'=\lim _{n \rightarrow \infty} f_{n}^{\prime}$$
+
+\Satz[Taylor Approximation] Sei $f:[a,b] \longrightarrow \R$ stetig und in $]a,b[$ (n+1)-mal diff.. Für jedes $a<x\leqslant b$ gibt es $\xi \in ]a,x[$ mit:
+$$f(x)=\sum_{k=0}^{n} \frac{f^{(k)}(a)}{k !}(x-a)^{k}+\frac{f^{(n+1)}(\xi)}{(n+1) !}(x-a)^{n+1}$$
 
 
 % % % % %
 % Wichtige Beispiele
 % % % % %
 \section{Wichtige Beispiele}
-\subsubsection{Exponentialfunktion}
+\Bsp[Exponentialfunktion]
 $$\exp (z):=\sum_{n=0}^{\infty} \frac{z^{n}}{n !} \quad \exp (z)' = \exp(z)$$
 $\exp : \R \longrightarrow] 0,+\infty[$ ist streng monoton wachsend, differenzierbar, und surjektiv. Beobachte dass $\exp (x) \geqslant 1+x \quad \forall x \in \R$.
 Die Umkehrabbildung ist 
 $$\ln :] 0,+\infty[\longrightarrow \R \quad \ln (x)' = 1/x$$
 wobei $\ln$ eine streng monoton wachsende, differenzierbare, bijektive Funktion ist.
 \sep
-\subsubsection{Trigonometrische Funkt.}
+\Bsp[Trigonometrische Funkt.]
 \begin{align*}
 \sin(\varphi)  
 & =\sum_{k=0}^{\infty} (-1)^k \frac{\varphi^{2k+1}}{(2k+1)!} &\sin(\varphi)' = \cos(\varphi)  \\
 \cos(\varphi)  
 & = \sum_{k=0}^{\infty} (-1)^k \frac{\varphi^{2k}}{(2k)!} &\cos(\varphi)' = -\sin(\varphi) \\
 \tan(\varphi)  
-& = \frac{\sin(\varphi)}{\cos(\varphi)} & \tan(\varphi)' = \frac{1}{\cos(\varphi)^2}
+& = \frac{\sin(\varphi)}{\cos(\varphi)} & \tan(\varphi)' = \frac{1}{\cos(\varphi)^2} 
 \end{align*}
+Merke dass $\int \tan(x) = -\ln(|\cos(x)|)$.
 
 \Korollar 
 \begin{align*}
@@ -72,6 +102,33 @@ wobei $\ln$ eine streng monoton wachsende, differenzierbare, bijektive Funktion 
 		  $\cos(z+w) = cos(z)cos(w) - sin(w)sin(z)$ 
 	\item $\sin(z) = \frac{e^{iz}-e^{-iz}}{2i}$, $\cos(z) = \frac{e^{iz}+e^{-iz}}{2}$
 \end{itemize}
+\Lemma
+\begin{align*}
+\arcsin(y)'  &= \frac{1}{\sqrt{1-y^2}}  &[-1,1] \longrightarrow [-\pi/2, \pi/2]  \\
+\arccos(y)'  &= \frac{-1}{\sqrt{1-y^2}}  &[-1,1] \longrightarrow [0, \pi]  \\
+\arctan(y)'  &= \frac{1}{1+y^2}  &[-\infty,\infty] \longrightarrow [-\pi/2, \pi/2]  \\
+\end{align*}
 \sep
-\subsubsection{Hyperbolische Funkt.}
-\todo
+
+\Bsp[Hyperbolische Funkt.]
+\begin{align*}
+\sinh(x)  & =\frac{e^{x}+e^{-x}}{2} &\arcsinh(y)' = \frac{1}{\sqrt{1+y^2}}  \\
+\cosh(x)  & =\frac{e^{x}-e^{-x}}{2} &\arccosh(y)' =  \frac{1}{\sqrt{y^2-1}} \\
+\tanh(x)  & =\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}} & \arctanh(y)' = \frac{1}{1-y^2}
+\end{align*}
+wobei arsinh $ : \R \rightarrow \R$, arcosh $ : [1,\infty[ \rightarrow [0,\infty[$ und artanh $: ]-1,1[ \rightarrow \R$.
+\begin{itemize}
+	\item $\cosh(z)^2 - \sinh(z)^2 = 1$
+\end{itemize}
+\sep
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{3cm}p{4cm}}
+$\int \ln(x) dx$ & $=x\ln(x)-x+C$
+\\
+$\int x e^x dx$ & $=x e^x-x+C$
+\\
+$\int x \cos(x) dx$ & $=x\sin(x)+\cos(x)+C$
+\end{tabular}
+\end{table}

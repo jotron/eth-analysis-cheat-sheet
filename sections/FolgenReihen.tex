@@ -54,6 +54,12 @@ $$S:=\sum_{k=1}^{\infty}(-1)^{k+1} a_{k}$$ und es gilt $a_{1}-a_{2} \leqslant S 
 
 \Bsp Die Reihe $\sum_{k=1}^{\infty}(-1)^{k+1} \frac{1}{k}$ konvergiert.
 
+% Integral Hilfe
+\Satz[McLaurin] Sei $f:[1,\infty[ \longrightarrow [0, \infty[$ monoton fallend.
+$$ \sum_{n=1}^\infty f(n) \text{ konvergiert} \Longleftrightarrow \int_1^\infty f(x) dx \text{ konv.}$$
+und in diesem Fall gilt \\
+$ 0 \leq \sum_{n=1}^\infty f(n) - \int_1^\infty f(x) dx \leq f(1)$
+
 
 % % % % %
 % TRICKS
@@ -76,7 +82,17 @@ $$\liminf\limits_{n \rightarrow \infty} a_n := \lim \limits_{n \rightarrow \inft
 % Dirichlet, Umordnungen
 \Satz[Umordnung] Falls eine Reihe absolut konvergiert, dann konvergiert jede
 Umordnung der Reihe und hat denselben Grenzwert.
-\todo{Copy from R.}
+
+\Satz[2.7.23] Falls $\sum_{i=0}^{m}\sum_{j=0}^{m}\abs{a_{ij}} \leq B, \quad \forall m \geq 0$
+\[ \text{dann konvergiert } S_{i} := \sum_{j=0}^{\infty} a_{ij} \quad \forall i \geq 0 \]
+\[ \text{dann konvergiert } U_{j} := \sum_{i=0}^{\infty} a_{ij} \quad \forall j \geq 0 \]
+\[ \text{und es gilt } \sum_{i=0}^{m} S_{i} = \sum_{j=0}^{m} U_{j} \]
+
+\Satz[2.7.24] Das \textbf{Cauchy Produkt} der Reihen $\sum_{i=0}^{\infty} a_i, \ \sum_{i=0}^{\infty} b_i$ ist die Reihe
+\[\sum_{n=0}^\infty \Bigg(\sum_{j=0}^{n} a_{n-j} b_{j} \Bigg) = a_0 b_0 + (a_0 b_1 + a_1 b_0) + \cdots  \]
+
+\Satz[2.7.26] Falls die Reihen $\sum_{i=0}^{\infty} a_i, \ \sum_{i=0}^{\infty} b_i$ absolut konvergieren, so knovergiert ihr Cauchy Produkt und es gilt:
+\[\sum_{n=0}^\infty \Bigg(\sum_{j=0}^{n} a_{n-j} b_{j} \Bigg) = \Bigg( \sum_{i=0}^\infty a_i \Bigg) \Bigg(\sum_{j=0}^\infty b_j \Bigg) \]
 
 % % % % %
 % Bekannte Grenzwerte
