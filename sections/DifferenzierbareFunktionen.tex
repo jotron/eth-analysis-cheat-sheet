@@ -33,7 +33,7 @@ $$f(x) = f(x_0) + \phi(x)(x-x_0) \quad \forall x \in D$$
 \end{itemize}
 
 \Korollar[Inverse] Sei $f : D \longrightarrow E$ eine bijektive Funktion, f in $x_0$ differenzierbar, $f'(x_0) \neq 0$ und $f^{-1}$ ist in $y_0 = f(x_0)$ stetig, dann gilt
-$$(f^{-1})(y_0) = \frac{1}{f'(x_0)}$$
+$$(f^{-1})'(y_0) = \frac{1}{f'(x_0)}$$
 
 \section{Zentrale Sätze}
 \Satz[Extrema] $f : \R \longrightarrow \R$ besitzt ein lokales Max./Min. in $x_0$ falls es $\delta >0$ gibt mit:
@@ -76,7 +76,9 @@ $$\exp (z):=\sum_{n=0}^{\infty} \frac{z^{n}}{n !} \quad \exp (z)' = \exp(z)$$
 $\exp : \R \longrightarrow] 0,+\infty[$ ist streng monoton wachsend, differenzierbar, und surjektiv. Beobachte dass $\exp (x) \geqslant 1+x \quad \forall x \in \R$.
 Die Umkehrabbildung ist 
 $$\ln :] 0,+\infty[\longrightarrow \R \quad \ln (x)' = 1/x$$
-wobei $\ln$ eine streng monoton wachsende, differenzierbare, bijektive Funktion ist.
+wobei $\ln$ eine streng monoton wachsende, differenzierbare, bijektive Funktion ist. \\
+\Lemma $e^x > 1+x$
+
 \sep
 \Bsp[Trigonometrische Funkt.]
 \begin{align*}
@@ -106,29 +108,39 @@ Merke dass $\int \tan(x) = -\ln(|\cos(x)|)$.
 \begin{align*}
 \arcsin(y)'  &= \frac{1}{\sqrt{1-y^2}}  &[-1,1] \longrightarrow [-\pi/2, \pi/2]  \\
 \arccos(y)'  &= \frac{-1}{\sqrt{1-y^2}}  &[-1,1] \longrightarrow [0, \pi]  \\
-\arctan(y)'  &= \frac{1}{1+y^2}  &[-\infty,\infty] \longrightarrow [-\pi/2, \pi/2]  \\
+\arctan(y)'  &= \frac{1}{1+y^2}  &[-\infty,\infty] \longrightarrow [-\pi/2, \pi/2]  
 \end{align*}
+
+\Lemma
+\begin{align*}
+\sin(\arccos(x))  &= \cos(\arcsin(x)) &= \sqrt{1-x^2} \\
+\arcsin(\cos(x)) &= x + \pi/2 
+\end{align*}
+
 \sep
 
 \Bsp[Hyperbolische Funkt.]
 \begin{align*}
-\sinh(x)  & =\frac{e^{x}+e^{-x}}{2} &\arcsinh(y)' = \frac{1}{\sqrt{1+y^2}}  \\
-\cosh(x)  & =\frac{e^{x}-e^{-x}}{2} &\arccosh(y)' =  \frac{1}{\sqrt{y^2-1}} \\
+\sinh(x)  & =\frac{e^{x}-e^{-x}}{2} &\arcsinh(y)' = \frac{1}{\sqrt{1+y^2}}  \\
+\cosh(x)  & =\frac{e^{x}+e^{-x}}{2} &\arccosh(y)' =  \frac{1}{\sqrt{y^2-1}} \\
 \tanh(x)  & =\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}} & \arctanh(y)' = \frac{1}{1-y^2}
 \end{align*}
 wobei arsinh $ : \R \rightarrow \R$, arcosh $ : [1,\infty[ \rightarrow [0,\infty[$ und artanh $: ]-1,1[ \rightarrow \R$.
 \begin{itemize}
 	\item $\cosh(z)^2 - \sinh(z)^2 = 1$
+	\item $\sinh(x)' = \cosh(x)$
+	\item $\cosh(x)' = \sinh(x)$
 \end{itemize}
 \sep
 
 \begin{table}[H]
 \centering
 \begin{tabular}{p{3cm}p{4cm}}
-$\int \ln(x) dx$ & $=x\ln(x)-x+C$
-\\
-$\int x e^x dx$ & $=x e^x-x+C$
-\\
-$\int x \cos(x) dx$ & $=x\sin(x)+\cos(x)+C$
+$\int \ln(x) dx$ & $=x\ln(x)-x+C$ \\
+$\int x e^x dx$ & $=x e^x-x+C$ \\
+$\int x \cos(x) dx$ & $=x\sin(x)+\cos(x)+C$ \\
+$\int x \sin(x) dx$ & $=sin(x)-x\cos(x)+C$ \\
+$\int \sin(x)^2 dx$ & $=(2x-sin(2x))/4+C$ \\
+$\int \cos(x)^2 dx$ & $=(\cos(x)\sin(x)+x)/2+C$ \\
 \end{tabular}
 \end{table}
