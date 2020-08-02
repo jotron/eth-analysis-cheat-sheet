@@ -46,7 +46,7 @@ In beiden Fällen gilt $f'(x_0) = 0$.
 	&f(x) \lessgtr f(x_0) \quad &\forall x \in ]x_0-\delta, x_0[ 
 \end{align*}
 
-\Satz[Lagrange] Sei $f:[a,b] \longrightarrow \R$ stetig und in $]a,b[$ diff., dann gibt es $\xi \in ]a,b[$ mit
+\Satz[Lagrange/Mean] Sei $f:[a,b] \longrightarrow \R$ stetig und in $]a,b[$ diff., dann gibt es $\xi \in ]a,b[$ mit
 $$f(b)-f(a) = f'(\xi)(b-a)$$
 
 \Satz[L'Hospital] Seien $f,g: ]a,b[ \longrightarrow \R$ diff. mit $g'(x) \neq 0 \forall x \in [a,b]$. Falls
@@ -57,6 +57,9 @@ $$\lim _{x \rightarrow b^{-}} \frac{f(x)}{g(x)}=\lambda$$
 
 \Def[Konvex] $f$ ist konvex (auf I) falls $\forall x \leq y$ und $\lambda \in [0,1]$ gilt
 $$f(\lambda x+(1-\lambda) y) \leqslant \lambda f(x)+(1-\lambda) f(y)$$
+
+\Lemma[Konvex] Seie $f: ]a,b[ \longrightarrow \R$ und $f \in C^2$ 
+$$ f \text{ konvex} \iff \forall x \quad f''(x) \geq 0$$
 
 \Def[Glatt] Die Funktion $f$ ist glatt falls sie $\forall n \geq 1$, n-mal differenzierbar ist.
 
@@ -135,7 +138,7 @@ wobei arsinh $ : \R \rightarrow \R$, arcosh $ : [1,\infty[ \rightarrow [0,\infty
 
 \begin{table}[H]
 \centering
-\begin{tabular}{p{3cm}p{4cm}}
+\begin{tabular}{p{2cm}p{4cm}}
 $\int \ln(x) dx$ & $=x\ln(x)-x+C$ \\
 $\int x e^x dx$ & $=x e^x-x+C$ \\
 $\int x \cos(x) dx$ & $=x\sin(x)+\cos(x)+C$ \\

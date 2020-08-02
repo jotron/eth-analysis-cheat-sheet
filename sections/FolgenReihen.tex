@@ -52,13 +52,19 @@ Falls $\liminf\limits_{n \rightarrow \infty}\square > 1$ divergiert die Reihe.
 \Satz[Alternating] Sei $\left(a_{n}\right)_{n \geqslant 1}$ monoton fallend mit $a_{n} \geqslant 0 \quad \forall n \geqslant 1$ und $\lim \limits_{n \rightarrow \infty} a_{n}=0 .$ Dann konvergiert 
 $$S:=\sum_{k=1}^{\infty}(-1)^{k+1} a_{k}$$ und es gilt $a_{1}-a_{2} \leqslant S \leqslant a_{1}$.
 
-\Bsp Die Reihe $\sum_{k=1}^{\infty}(-1)^{k+1} \frac{1}{k}$ konvergiert.
+\Bsp $\sum_{k=1}^{\infty}(-1)^{k+1} \frac{1}{k}$ konvergiert zu $\log(2)$.
+
+\Bsp $\sum_{k=1}^{\infty}(-1)^{k+1} \frac{x^k}{k}$ konvergiert zu $\log(1+x)$ für $-1<x<1$.
 
 % Integral Hilfe
 \Satz[McLaurin] Sei $f:[1,\infty[ \longrightarrow [0, \infty[$ monoton fallend.
 $$ \sum_{n=1}^\infty f(n) \text{ konvergiert} \Longleftrightarrow \int_1^\infty f(x) dx \text{ konv.}$$
 und in diesem Fall gilt \\
 $ 0 \leq \sum_{n=1}^\infty f(n) - \int_1^\infty f(x) dx \leq f(1)$
+
+\Korollar[Vergleichssatz] Seien $\sum_{k=1}^{\infty} a_{k}$ und $\sum_{k=1}^{\infty} b_{k}$ Reihen mit: $0 \leq a_{k} \leq b_{k} \quad \forall k \geq 1. $
+\[ \sum_{k=1}^{\infty} b_{k} \text{ konvergent} \implies \sum_{k=1}^{\infty} a_{k} \text{ konvergent} \]
+\[ \sum_{k=1}^{\infty} a_{k} \text{ divergent} \implies \sum_{k=1}^{\infty} b_{k} \text{ divergent} \]
 
 
 % % % % %
@@ -123,6 +129,7 @@ Wobei je nach Eignung:
 \text{ oder Polynom}\\
 \rho = \frac{1}{\lim_{n\to\infty}\sqrt[n]{\abs{a_n}}}. &\qquad(b_n)^n
 \end{align*}
+Beachte: Potenzreihen sind innerhalb ihres Konvergenzbereichs stetig.
 
 
 
