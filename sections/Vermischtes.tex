@@ -38,6 +38,12 @@
 \section{Quadratic Formula}
 \[ x = \frac{-b + \pm \sqrt{b^2 - 4 a c} }{2 a} \]
 
+\section{Länge von Kurven}
+
+\[ L = \int_a^b = \sqrt{x'(t)^2 + y'(t)^2} dt  \quad p(t) = (x(t), y(t))\]
+
+\[ L = \int_c^d = \sqrt{1 + f'(x)^2} dx \quad y = f(x), \ x \in [c, d] \]
+
 \section{Weitere McLaurin Reihen}
 \begin{align*}
 \sin(x)     &= \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2 n+1) !} x^{2 n+1} \\
@@ -97,6 +103,46 @@ Note that $\cos$ is bounded. \\
 \item $\forall \varepsilon>0,$ there exists $N$ such that $a_{N}>c-\varepsilon$
 \item \dots
 \end{enumerate}
+
+\Beweis[Thomae is Integrable]
+$$T(x)=\left\{\begin{array}{cl}0 & \text { if } x \text { is irrational or } x=0 \\ 1 / q & \text { if } x=p / q \text { where } q \in \mathbb{N}, \text { and } p \in \mathbb{Z}\end{array}\right.$$
+\begin{enumerate}
+\item $s(f, P) = 0$
+\item $K_M = |\{p/q \in [a,b] | q \leq M \}$
+\item $S(f,P_N) \leq 2K_M N^{-1}+M^{-1}(b-a)$
+\item $S(f,P_N) \leq \epsilon$ for $M=\frac{(b-a)*2}{\epsilon}$, $N=\frac{4K_M}{\epsilon}$
+\end{enumerate}
+
+\Beweis[Integrierbar $\rightarrow$ Beschränkt]
+\begin{enumerate}
+\item Da $f$ Riemann Integrabel ist, folgt aus der Definition dass es ein $I\in \R$ gibt sodass: $\forall \epsilon > 0$ ,$\exists \delta > 0$ so dass $$|I|-\epsilon<S(f, P, \xi)<|I|+\epsilon$$ für jede Partition 
+	$P$ von $[a,b]$ mit$\left|x_{i+1}-x_{i}\right|<\delta$, und für jede Wahl von Zwischenpunkten $\xi$
+\item Angenommen $f$ ist unbeschränkt, dann $\exists \xi_{i_0}$ 
+\item $\left|f\left(\xi_{i_{0}}\right)\right|\left(x_{i}-x_{i-1}\right)>|I|+\epsilon+\left|\sum_{1 \leq i \neq i_{0} \leq n} f\left(\xi_{i}\right)\left(x_{i+1}-x_{i}\right)\right|$
+\item Contradiction
+\end{enumerate}
+
+\Beweis $\lim \limits_{n \rightarrow \infty} (a_n \cdot b_n) = (\lim \limits_{n \rightarrow \infty} a_n) \cdot (\lim \limits_{n \rightarrow \infty}  b_n)$
+
+Wir dürfen dabei verwenden dass:
+\[
+\begin{array}{l}
+\forall \varepsilon>0 \quad \exists n_{a} \quad \forall n \geq n_{a}:\left|a_{n}-a\right|<\varepsilon \\
+\forall \varepsilon>0 \quad \exists n_{b} \quad \forall n \geq n_{b}:\left|b_{n}-b\right|<\varepsilon
+\end{array}
+\]
+Sei also $|a| \geq \varepsilon_{0}>0$ beliebig. Setze $n_{0}:=\max \left\{n_{a}, n_{b}\right\} .$ Dann gilt:
+\[
+\left|a_{n} b_{n}-a b\right|=\left|a_{n} b_{n}+\left(a_{n} b-a_{n} b\right)-a b\right|
+\]
+\[
+\begin{aligned}
+&=\left|a_{n}\left(b_{n}-b\right)+b\left(a_{n}-a\right)\right| \\
+(\triangle-\text { Ungl. }) & \leq\left|a_{n}\right|\left|b_{n}-b\right|+|b|\left|a_{n}-a\right| \\
+(*),(1),(2) &<(\varepsilon+|a|) \varepsilon+|b| \varepsilon \\
+(\varepsilon \leq|a|) & \leq \underbrace{(2|a|+|b|)}_{=: C} \varepsilon=C \cdot \varepsilon \quad\left(\forall n \geq n_{0}\right)
+\end{aligned}
+\]
 
 \section{Tricks}
 \Trick
