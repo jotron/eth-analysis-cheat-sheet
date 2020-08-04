@@ -4,8 +4,60 @@
 \section{Trigonometrie}
 \includegraphics[scale=0.225]{sinus_cosinus}
 
+\begin{flalign}
+& \sin \Big(\frac{\pi}{2} - \alpha \Big) = \cos \alpha  & \nonumber \\
+& \cos \Big( \frac{\pi}{2} + \alpha \Big) = \sin(\alpha) & \nonumber \\
+& \tan \Big( \frac{\pi}{2} - \alpha \Big) = \frac{1}{\tan \alpha }& \nonumber \\
+& \sin( - \alpha) = - \sin \alpha & \nonumber  \\
+& \cos( - \alpha) = \cos \alpha & \nonumber  \\
+& \tan(- \alpha) = - \tan \alpha & \nonumber \\
+& \sin ( \alpha \pm \beta ) = \sin \alpha \cos \beta \pm \cos \alpha \sin \beta & \nonumber \\ 
+& \cos( \alpha \pm \beta ) = \cos \alpha \cos \beta \mp \sin \alpha \sin \beta & \nonumber \\
+& \tan( \alpha \pm \beta) = \frac{\tan \alpha \pm \tan \beta}{1 \mp \tan \alpha \tan \beta} & \nonumber \\
+& \sin ( 2 \alpha) = 2 \sin \cos \alpha & \nonumber \\
+& \cos( 2 \alpha) = \cos^2 \alpha - \sin^2 \alpha = 2 \cos^2 \alpha - 1 & \nonumber \\
+& \tan( 2 \alpha) = \frac{2 \tan \alpha}{4 - \tan^2 \alpha} & \nonumber \\
+& \sin( 3 \alpha) = 3 \sin \alpha - 4 \sin^3 \alpha & \nonumber \\
+& \cos(3 \alpha) = 4 \cos^3 \alpha - \cos \alpha & \nonumber \\
+& \tan(3 \alpha) = \frac{3 \tan \alpha - \tan^3 \alpha}{1 - 3 \tan^2 \alpha} & \nonumber \\
+& \sin^2 \Big(\frac{\alpha}{2} \Big) = \frac{1 - \cos \alpha}{2} & \nonumber \\
+& \cos^2 \Big(\frac{\alpha}{2} \Big) = \frac{1 + \cos \alpha}{2} & \nonumber  \\
+& \tan^2 \Big(\frac{\alpha}{2} \Big) = \frac{1 - \cos \alpha}{1 + \cos \alpha} & \nonumber \\
+& \tan \Big(\frac{\alpha}{2} \Big) = \frac{1 - \cos \alpha}{\sin \alpha} = \frac{\sin \alpha}{1 + \cos \alpha} & \nonumber \\
+& \sin \alpha + \sin \beta = 2 \sin \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2} & \nonumber \\
+& \sin \alpha - \sin \beta = 2 \cos \frac{\alpha + \beta}{2} \sin \frac{\alpha - \beta}{2} & \nonumber \\
+& \cos \alpha + \cos \beta = 2 \cos \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2} & \nonumber \\
+& \cos \alpha - \cos \beta = - 2 \sin \frac{\alpha + \beta}{2} \sin \frac{\alpha - \beta}{2} & \nonumber \\
+& \sin \alpha \sin \beta = \frac{1}{2} [ \cos ( \alpha - \beta) - \cos (\alpha + \beta)] & \nonumber \\
+& \cos \alpha \cos \beta = \frac{1}{2} [ \cos ( \alpha - \beta) + \cos( \alpha + \beta)] & \nonumber \\
+& \sin \alpha \cos \beta = \frac{1}{2} [ \sin( \alpha - \beta) + \sin( \alpha + \beta) ] & \nonumber \\
+& \sin( \arccos(x)) = \sqrt{1 - x^2}  & \nonumber \\
+& \cos( \arcsin(x)) = \sqrt{1 - x ^2} & \nonumber
+\end{flalign}
+
 \section{Quadratic Formula}
 \[ x = \frac{-b + \pm \sqrt{b^2 - 4 a c} }{2 a} \]
+
+\section{Weitere McLaurin Reihen}
+\begin{align*}
+\sin(x)     &= \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2 n+1) !} x^{2 n+1} \\
+            &= x-\frac{x^{3}}{6}+\frac{x^{5}}{120} - O(x^7) \\
+\cos(x)     &= \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2 n) !} x^{2 n} \\
+            &= 1-\frac{x^{2}}{2}+\frac{x^{4}}{24} - O(x^6) \\
+\log(1+x)   &= \sum_{n=1}^{\infty}(-1)^{n+1} \frac{x^{n}}{n} \forall |x|<1 \\
+            &= x-\frac{x^{2}}{2}+\frac{x^{3}}{3} - O(x^4) \\
+\arcsin     &= \sum_{n=0}^{\infty} \frac{(2 n) !}{4^{n}(n !)^{2}(2 n+1)} x^{2 n+1} \\
+            &= x-\frac{x^{3}}{6}+\frac{3 x^{5}}{40} + O(x^7) \\
+\arccos(x)  &= \pi/2-\arcsin(x) \\
+\arctan(x)  &= \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2 n+1)} x^{2 n+1} \\
+            &= x-\frac{x^{3}}{3}+\frac{x^{5}}{5} - O(x^7) \\
+\sinh(x)    &= \sum_{n=0}^{\infty} \frac{x^{2 n+1}}{(2 n+1) !} \\
+            &= x+\frac{x^{3}}{6}+\frac{x^{5}}{120} + O(x^7) \\
+\cosh(x)    &= \sum_{n=0}^{\infty} \frac{x^{2 n}}{(2 n) !} \\
+            &= 1+\frac{x^{2}}{2}+\frac{x^{4}}{24} + O(x^6) \\
+\arctanh(x) &= \sum_{n=0}^{\infty} \frac{x^{2 n+1}}{2 n+1} 
+\end{align*}
+
 
 \section{Proofs}
 \Beweis[$\sin(x) < x$] Case distinction $\rightarrow$ Mean-Value-Theorem \\
@@ -18,8 +70,6 @@ Note that $\cos$ is bounded. \\
 
 \Beweis[Fixpunkt 6.4a] Define $g(x):=f(x)-x \rightarrow$ Zwischenwertsatz \\
 
-\Beweis[$1+x \leq e^x$] Bernouilli \\
-
 \Beweis[Sandwich]
 \begin{enumerate}
 \item $\lim\limits_{n \rightarrow \infty} a_{n} = \lim\limits_{n \rightarrow \infty} b_{n} = \alpha$ 
@@ -31,7 +81,7 @@ Note that $\cos$ is bounded. \\
 \text{Es gilt } \abs{b_n - \alpha} < \epsilon \implies + \epsilon > b_n - \alpha \\
 \implies - \epsilon < a_n - \alpha \leq c_n - \alpha \leq b_n - \alpha < \epsilon \\
 \implies \abs{c_n - \alpha} < \epsilon \implies \lim\limits_{n \rightarrow \infty} c_{n} = \alpha
-\)
+\) 
 
 \Beweis[Hôpital]
 \begin{align*}
@@ -41,12 +91,32 @@ Note that $\cos$ is bounded. \\
 &=\frac{f^{\prime}(a)}{g^{\prime}(a)}
 \end{align*}
 
+\Beweis[Monotone Konvergenz]
+\begin{enumerate}
+\item Supremum exists
+\item $\forall \varepsilon>0,$ there exists $N$ such that $a_{N}>c-\varepsilon$
+\item \dots
+\end{enumerate}
+
 \section{Tricks}
 \Trick
 \begin{align*}
 a^n-b^n =& (a-b)(a^{n-1} + a^{n-2} b +\dots+b^{n-1}) \\
 		=& (a-b)\sum_{i=0}^{n-1} b^{i}a^{n-1-i} 
 \end{align*}
+
+\section{Rezepte}
+\subsection*{Konvergenz von Reihen}
+\begin{enumerate}
+\item Weierstrass (monoton + beschränkt)
+\item Vergleichssatz
+\item Geometrische Folge
+\item Alternierende Reihe
+\item Riemann Zeta
+\item Teleskopieren
+\item $\lim \limits_{n \rightarrow \infty} a_n = 0$ ?
+\item konvergiert das Integral?
+\end{enumerate}
 
 \section{Am Schluss}
 \begin{itemize}
